@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "doctor@example.com",
+      "role": "doctor",
+      "name": "Dr. Sarah Johnson",
+      "specialization": "Internal Medicine"
+    },
+    {
+      "id": "2",
+      "email": "patient@example.com",
+      "role": "patient",
+      "name": "John Smith",
+      "age": 45,
+      "gender": "male"
+    }
+  ],
+  "patients": [
+    {
+      "id": "p1",
+      "name": "John Smith",
+      "age": 45,
+      "gender": "male",
+      "location": "New York, NY",
+      "bloodPressure": "140/90",
+      "glucose": 110,
+      "heartRate": 75,
+      "weight": 180,
+      "bmi": 27.3,
+      "conditions": ["Hypertension", "Pre-diabetes"],
+      "medications": [
+        {
+          "name": "Lisinopril",
+          "dosage": "10mg",
+          "frequency": "Once daily",
+          "sideEffects": "Dry cough"
+        }
+      ],
+      "lifestyle": {
+        "exercise": "2-3 times per week",
+        "sleep": "6-7 hours",
+        "diet": "Mediterranean",
+        "stress": "Moderate"
+      },
+      "riskAssessment": {
+        "diabetesRisk": 78,
+        "cardiovascularRisk": 65,
+        "overallRisk": "High"
+      },
+      "status": "monitoring",
+      "lastVisit": "2024-01-15",
+      "nextVisit": "2024-02-15"
+    },
+    {
+      "id": "p2",
+      "name": "Maria Garcia",
+      "age": 32,
+      "gender": "female",
+      "location": "Los Angeles, CA",
+      "bloodPressure": "120/80",
+      "glucose": 95,
+      "heartRate": 68,
+      "weight": 140,
+      "bmi": 22.1,
+      "conditions": ["Anxiety"],
+      "medications": [],
+      "lifestyle": {
+        "exercise": "4-5 times per week",
+        "sleep": "7-8 hours",
+        "diet": "Balanced",
+        "stress": "Low"
+      },
+      "riskAssessment": {
+        "diabetesRisk": 15,
+        "cardiovascularRisk": 20,
+        "overallRisk": "Low"
+      },
+      "status": "stable",
+      "lastVisit": "2024-01-10",
+      "nextVisit": "2024-03-10"
+    },
+    {
+      "id": "p3",
+      "name": "Robert Wilson",
+      "age": 58,
+      "gender": "male",
+      "location": "Chicago, IL",
+      "bloodPressure": "160/100",
+      "glucose": 180,
+      "heartRate": 85,
+      "weight": 220,
+      "bmi": 32.1,
+      "conditions": ["Type 2 Diabetes", "Hypertension", "Obesity"],
+      "medications": [
+        {
+          "name": "Metformin",
+          "dosage": "500mg",
+          "frequency": "Twice daily",
+          "sideEffects": "Nausea"
+        },
+        {
+          "name": "Amlodipine",
+          "dosage": "5mg",
+          "frequency": "Once daily",
+          "sideEffects": "Swelling"
+        }
+      ],
+      "lifestyle": {
+        "exercise": "Rarely",
+        "sleep": "5-6 hours",
+        "diet": "High carb",
+        "stress": "High"
+      },
+      "riskAssessment": {
+        "diabetesRisk": 95,
+        "cardiovascularRisk": 88,
+        "overallRisk": "Critical"
+      },
+      "status": "critical",
+      "lastVisit": "2024-01-20",
+      "nextVisit": "2024-01-27"
+    }
+  ],
+  "recommendations": {
+    "diet": [
+      "Increase fiber intake with whole grains and vegetables",
+      "Limit processed foods and added sugars",
+      "Include omega-3 rich foods like salmon and walnuts"
+    ],
+    "exercise": [
+      "Aim for 150 minutes of moderate aerobic activity per week",
+      "Include strength training exercises twice per week",
+      "Take short walks after meals to help control blood sugar"
+    ],
+    "lifestyle": [
+      "Maintain consistent sleep schedule of 7-9 hours",
+      "Practice stress reduction techniques like meditation",
+      "Monitor blood pressure and glucose levels regularly"
+    ]
+  },
+  "explainability": {
+    "globalFactors": [
+      { "factor": "Age", "importance": 0.25 },
+      { "factor": "BMI", "importance": 0.22 },
+      { "factor": "Blood Glucose", "importance": 0.2 },
+      { "factor": "Blood Pressure", "importance": 0.18 },
+      { "factor": "Family History", "importance": 0.15 }
+    ],
+    "localFactors": {
+      "patientId": "p1",
+      "factors": [
+        { "factor": "BMI (27.3)", "impact": 0.3, "direction": "increase" },
+        { "factor": "Glucose (110)", "impact": 0.25, "direction": "increase" },
+        { "factor": "Age (45)", "impact": 0.2, "direction": "increase" },
+        { "factor": "Exercise Frequency", "impact": -0.15, "direction": "decrease" }
+      ]
+    }
+  }
+}
